@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: "/live.png"
-heroText: Shark Xu
+heroText: live
 heroImageStyle:
   {
     maxHeight: "288px",

@@ -1,8 +1,11 @@
 module.exports = {
   title: "mellow的博客",
-  description: "这是描述",
+  description: "一路花香",
   base: '/blogs/',
   theme: "reco",
+  head: [
+    ['link', { rel: 'icon', href: '/logo.png' }]
+  ],
   locales: {
     "/": {
       lang: "zh-CN",
@@ -17,14 +20,15 @@ module.exports = {
       {
         text: "xinyu zheng 的博客",
         items: [
-          { text: "掘金", link: "https://juejin.cn/user/uu" },
+          { text: "掘金", link: "https://juejin.cn/user/2942709146585208" },
           { text: "Github", link: "https://github.com/xinyuzheng" },
         ],
       },
     ],
-    subSidebar: "auto",
+    subSidebar: 'auto',
     sidebar: [
       {
+        subSidebar: false,
         title: "欢迎学习",
         path: "/",
         collapsable: false, // 是否折叠
