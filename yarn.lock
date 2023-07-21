@@ -1727,7 +1727,7 @@
     toml "^3.0.0"
     upath "^1.1.0"
 
-"@vuepress/theme-default@1.9.9":
+"@vuepress/theme-default@1.9.9", "@vuepress/theme-default@^1.9.9":
   version "1.9.9"
   resolved "https://registry.npmmirror.com/@vuepress/theme-default/-/theme-default-1.9.9.tgz#26f1965e1204445fa617308d3b06f134baab4936"
   integrity sha512-de0FiOwM/h3rFTBSZK0NNBB117lA/e3IHusU7Xm2XeZRiZ/EE3yvbWclZnbbRNt3YjDMmrWXEW/kBTBxfiMuWQ==

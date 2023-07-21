@@ -1,56 +1,87 @@
 module.exports = {
   title: "mellow的博客",
   description: "一路花香",
-  base: '/blogs/',
-  theme: "reco",
+  base: "/blogs/",
   head: [
-    ['link', { rel: 'icon', href: '/logo.png' }]
+    [
+      "link",
+      {
+        rel: "icon",
+        href: "/logo.png",
+      },
+    ],
   ],
   locales: {
     "/": {
       lang: "zh-CN",
     },
   },
+  theme: "reco",
   themeConfig: {
     logo: "/avatar.png",
     authorAvatar: "/avatar.png",
     type: "blog",
     nav: [
-      { text: "首页", link: "/" },
       {
-        text: "xinyu zheng 的博客",
+        text: "首页",
+        link: "/",
+      },
+      {
+        text: "开始阅读",
+        link: "/guide/index",
+      },
+      {
+        text: "xinyu zheng 的链接",
         items: [
-          { text: "掘金", link: "https://juejin.cn/user/2942709146585208" },
-          { text: "Github", link: "https://github.com/xinyuzheng" },
+          {
+            text: "掘金",
+            link: "https://juejin.cn/user/2942709146585208",
+          },
+          {
+            text: "Github",
+            link: "https://github.com/xinyuzheng",
+          },
         ],
       },
     ],
-    subSidebar: 'auto',
-    sidebar: [
-      {
-        subSidebar: false,
-        title: "欢迎学习",
-        path: "/",
-        collapsable: false, // 是否折叠
-        children: [{ title: "博客简介", path: "/" }],
-      },
-      {
-        title: "基础篇",
-        path: "/blogs/1",
-        collapsable: true,
-        children: [
-          { title: "第一篇", path: "/blogs/1" },
-          { title: "第二篇", path: "/blogs/2" },
-        ],
-      },
-    ],
+    sidebar: false,
+    sidebar: {
+      "/guide/": [
+        {
+          title: "开始",
+          collapsable: false,
+          sidebarDepth: 0,
+          children: [
+            {
+              title: "开始阅读",
+              path: "/guide/",
+            },
+          ],
+        },
+        {
+          title: "java-web篇章",
+          collapsable: true,
+          sidebarDepth: 0,
+          children: [
+            {
+              title: "第一篇",
+              path: "/guide/java-web/Ajax&Axios",
+            },
+            {
+              title: "第二篇",
+              path: "/guide/java-web/Filter&Listener",
+            },
+          ],
+        },
+      ],
+    },
     blogConfig: {
       category: {
-        location: 2, // 在导航栏菜单中所占的位置，默认2
+        location: 3, // 在导航栏菜单中所占的位置，默认2
         text: "博客", // 默认文案 “分类”
       },
       tag: {
-        location: 4, // 在导航栏菜单中所占的位置，默认4
+        location: 5, // 在导航栏菜单中所占的位置，默认4
         text: "Tag", // 默认文案 “标签”
       },
     },
@@ -82,7 +113,7 @@ module.exports = {
           {
             name: "강남역 4번 출구",
             artist: "Plastic / Fallin` Dild",
-            url: "https://assets.smallsunnyfox.com/music/2.mp3",
+            url: "https://music.163.com/#/song?id=254485",
             cover: "https://assets.smallsunnyfox.com/music/3.jpg",
           },
           {
@@ -100,6 +131,6 @@ module.exports = {
         // 悬浮窗样式
         floatStyle: { bottom: "20px", "z-index": "999999" },
       },
-    ]
-  ]
-}
+    ],
+  ],
+};
